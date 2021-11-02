@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org"  xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+    <title>Kyselyn kysymykset</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link type="text/css" rel="stylesheet" href="/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}" 
+    />
+</head>
+<body>
+
+<div class="container">
+
+	<div class="col-md-4">
+	<h3>Kysymykset:</h3>
+	</div>
+
+    <table class="table table-striped table-bordered table-responsive" role="grid">
+    <tr>
+    <th:block th:each="kysymys : ${kysymykset}">
+    <table style="width:100%">
+	<td th:text="${kysymys.teksti} "></td>				   
+	</tr>  		
+ 	</table>
+	<br>
+	</th:block>
+    </table>
+ 
+    <div style="clear: both; display: block; height: 10px;"></div>  
+ 
+ <!----------------    ----------------------------------> 
+  
+ 
+</div>	    	
+</body>
+</html>

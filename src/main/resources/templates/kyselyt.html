@@ -1,0 +1,40 @@
+
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+
+<style>
+table, th, td {
+  border:1px solid black;
+}
+</style>
+
+
+<head>
+<title>Kyselyt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+<h2>Kaikki kyselyt</h2>
+		
+
+
+
+<th:block th:each="kysely : ${kyselyt}">
+<table style="width:100%">
+<th th:text="${kysely.nimi}">  </th>
+
+<tr>
+ <td><a th:href="@{/kysely/{id}/kysymykset(id=${kysely.id})}">Kysymykset</a></td>
+</tr>
+
+
+</table>
+<br>
+</th:block>
+ 
+<button type="button"><a href="/uusikysely">Lisää uusi kysely</a>
+</button>
+</body>
+</html>

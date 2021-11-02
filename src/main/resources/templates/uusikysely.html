@@ -1,0 +1,18 @@
+
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Kyselylomake</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h2>Muodosta kyselylomake</h2>
+	<form method="post" action="#" th:action="@{/tallenna}"  th:object= ${kysely} >
+	<p>Kyselyn nimi: <input type="text" th:field="${kysely.nimi}" /></p>
+
+	
+	<input type="submit" value="Tallenna" /> <input type="Reset" value="Tyhjennä" />
+	</form>
+    
+</body>
+</html>
